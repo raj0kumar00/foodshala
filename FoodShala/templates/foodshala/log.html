@@ -1,0 +1,39 @@
+
+
+<div class="myheader">
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <a href="#" class="navbar-brand">Foodshala</a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav">
+        <a href="/" class="nav-item nav-link active">Home</a>
+        <a href="/menu" class="nav-item nav-link">Menu</a>
+        {% if user.is_authenticated %}
+        <p class="nav-item nav-link">Welcome <b>{{ user.username }}</b> </p>
+      {% endif %}
+      {% if request.user.is_restaurant %}
+      <a href="/allorders" class="nav-item nav-link">all orders</a>
+      <a href="/additem" class="nav-item nav-link">add new item</a>
+       {% endif %}
+       {% if user.is_authenticated %}
+       <a href="/logout" class="nav-item nav-link">Logout</a>
+       {% endif %}
+      </div>
+      <div class="navbar-nav ml-auto">
+        <a href="#" class="btn btn-default" data-toggle="modal" data-target="#modalLoginForm">Login</a>
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Register
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+            <li role="presentation"><a class='dropdown-item' tabindex="-1" href="csignup">customer</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation"><a class='dropdown-item' tabindex="-1" href="rsignup">restaurant</a></li>
+          </ul>
+          </div>
+      </div>
+    </div>
+  </nav>
+</div>

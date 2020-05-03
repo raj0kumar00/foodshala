@@ -1,0 +1,4 @@
+backend : django(python)
+front end : html , css, bootstrap
+database : mysql
+technical help : django documentation, stackoverflow

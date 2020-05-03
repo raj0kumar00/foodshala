@@ -1,0 +1,34 @@
+Que : how to install ?
+Ans :  
+STEP 1
+	-open cmd(window ) write
+	pip install -r requirements.txt
+	-open terminal(linux) and write 
+	python3 -m pip -r requirements.txt
+STEP 2:
+	 goto projectalfa>>settings.py (line number 72)
+	 and change the default values to your mysql values
+	'default': {  
+        'ENGINE': 'django.db.backends.mysql',  
+        'NAME': 'foodshala',
+        'USER':'root',
+        'PASSWORD':'',
+        'HOST':'localhost',
+        'PORT':'3306'  
+    }
+	where-
+		NAME : your database NAME
+		USEr : database user NAME
+		password : database password
+		HOST : database host NAME
+STEP 3:
+	open cmd(window) and write
+	python manage.py makemigrations
+	python manage.py migrate
+FINAL STEP:
+	python manage.py runserver
+==================================================================================
+IF YOU FACE ANY PROBLEM DURING THE INSTALLATION .
+FEEL FREE TO CONTECT ME.
+RAJ0KUMAR00@GMAIL.COM
+===================================================================================

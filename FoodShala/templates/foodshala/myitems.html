@@ -1,0 +1,28 @@
+{% extends 'foodshala/header.html' %}
+
+{% block content %}
+
+<table class="table">
+	<tr>
+	  <th> Image</th>
+	  <th>food Name</th>
+	  <th>Category</th>
+	  <th>type</th>
+	  <th>price</th>
+	  <th> created date</th>
+	</tr>
+
+
+	{% for item in data %}
+	  <tr>
+		<td><img src="{{ item.image.url }}" width="100px"></td>
+		<td>{{ item.name }}</td>
+		<td>{{ item.category }}</td>
+		<td>{{ item.item_type }}</td>
+		<td>{{ item.price }}</td>
+		<td>{{ item.created_date }}</td>
+	  </tr>
+	{% endfor %}
+  </table>
+
+{% endblock %}

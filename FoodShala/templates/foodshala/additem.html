@@ -1,0 +1,15 @@
+{% extends 'foodshala/header.html' %}
+
+{% block content %}
+{{myform.errors}}
+<br><br>
+<div style='border-style: solid; padding: 20px; margin: 0px 300px 0px 300px'>
+	<center>
+<form method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+	{{form.as_p}}
+		<button style="background-color:#F4EB16; color:blue" class="btn btn-outline-info" type="submit">Login</button>
+	</form>
+</center>
+</div>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'foodshala/header.html' %}
+
+{% block content %}
+
+{% if request.user.is_restaurant %}
+
+<table class="table">
+	<tr>
+	  <th> food name </th>
+	  <th>order by </th>
+	  <th>price</th>
+	  <th>delivery address</th>
+	  <th> order time</th>
+	</tr>
+
+
+	{% for item in data %}
+	  <tr>
+		<td>{{ item.food_name }}</td>
+		<th>{{item.order_by_name}}</th>
+		<td>{{ item.price }}</td>
+		<td>{{ item.address }}</td>
+		<td> {{item.created_date}}</td>
+	  </tr>
+	{% endfor %}
+  </table>
+
+{% endif %}
+
+{% if request.user.is_customer %}
+<table class="table">
+	<tr>
+	  <th> food name </th>
+	  <th>price</th>
+	  <th>delivery address</th>
+	</tr>
+
+
+	{% for item in data %}
+	  <tr>
+		<td>{{ item.food_name }}</td>
+		<td>{{ item.price }}</td>
+		<td>{{ item.address }}</td>
+	  </tr>
+	{% endfor %}
+  </table>
+  {% endif %}
+
+{% endblock %}
