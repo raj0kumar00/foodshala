@@ -5,7 +5,7 @@ chardet==3.0.4
 click==7.1.1
 cryptography==2.9
 decorator==4.4.2
-Django==3.0.4
+Django==3.0.12
 django-cors-headers==3.2.1
 django-evostream==0.1b2
 dnspython==1.16.0
