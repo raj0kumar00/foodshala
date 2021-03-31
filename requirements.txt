@@ -13,7 +13,7 @@ freeze==1.0.10
 idna==2.9
 itsdangerous==1.1.0
 Jinja2==2.11.1
-lxml==4.5.0
+lxml==4.6.3
 MarkupSafe==1.1.1
 myenv==201902.7
 mysqlclient==1.4.6
