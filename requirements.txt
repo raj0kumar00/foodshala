@@ -26,7 +26,7 @@ requests==2.23.0
 six==1.14.0
 soupsieve==2.0
 sqlparse==0.3.1
-urllib3==1.25.8
+urllib3==1.26.5
 validators==0.14.2
 Wand==0.5.9
 Werkzeug==1.0.1
